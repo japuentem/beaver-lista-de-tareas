@@ -1,0 +1,7 @@
+{
+  "name": "beaver-lista-de-tareas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

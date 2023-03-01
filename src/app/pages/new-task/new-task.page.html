@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">New Task</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <!-- Escuchar el evento de clic en el botón ion-fab-button -->
+    <ion-fab-button (click)="saveTask()">
+      <ion-icon name="save-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <!-- Agregar el icono de la paleta de colores -->
+    <ion-fab-button (click)="openColorPicker()">
+      <ion-icon name="color-palette-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-item>
+    <ion-input placeholder="Add task title" [(ngModel)]="titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea
+      placeholder="Add task text max 300 characters"
+      [autoGrow]="true"
+      [maxlength]="300"
+      [(ngModel)]="descripcion"
+    ></ion-textarea>
+  </ion-item>
+</ion-content>
